@@ -3,10 +3,10 @@ import math
 def euclideanDistance(point:tuple, point2:tuple):
     x1,y1 = point[0],point[1]
     x2,y2 = point2[0],point2[1]
-    distance = math.sqrt(math.abs(x1-x2)**2 + math.abs(y1-y2)**2)
+    distance = math.sqrt(abs(x1-x2)**2 + abs(y1-y2)**2)
     return distance
 
-if __name__=="main":
+if __name__=="__main__":
     points=[]
     distances=[]
     for i in range(10):
@@ -22,6 +22,8 @@ if __name__=="main":
             else:
                 distance=euclideanDistance(temp,points[j])
                 distances.append(distance)
-    print(distances)
+    for i in distances:
+        print(i)
+    print("min distance: ",min(distances))
 
     
